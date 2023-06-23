@@ -1,0 +1,153 @@
+.modal {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media screen and (min-width: 600px) {
+    width: 500px;
+    border-radius: 5px;
+    max-height: calc(90vh - 64px);
+    padding: 32px;
+  }
+  @media screen and (max-width: 599.9px) {
+    width: calc(100% - 32px);
+    max-height: calc(100vh - 64px);
+    padding: 32px 16px;
+  }
+
+  .close-icon {
+    margin: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .text-field, .multiline-text-field, .checkbox-field {
+      width: 100%;
+    }
+
+    .multiline-text-field {
+      margin-top: 8px;
+    }
+
+    .checkbox-field {
+      margin-bottom: -8px;
+    }
+
+    .response-rating {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+
+      @media screen and (min-width: 550px) {
+        flex-direction: row;
+      }
+      @media screen and (max-width: 599.9px) {
+        flex-direction: column;
+      }
+    }
+
+    .status-select {
+      display: flex;
+
+      @media screen and (min-width: 550px) {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        
+        :last-child {
+          flex-basis: 100%;
+        }
+      }
+      @media screen and (max-width: 599.9px) {
+        flex-direction: column;
+      }
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+    .avatar {
+      height: 150px;
+      width: 150px;
+      margin: 8px auto;
+    }
+    .user-avatar {
+      height: 150px;
+      width: 150px;
+      margin: 8px auto;
+    }
+    .avatar-buttons {
+      display: flex;
+      gap: 8px;
+      padding: 8px 0;
+    }
+    .avatar-buttons > * {
+      flex: 1 1 0;
+    }
+    .delete-icon {
+      color: white;
+    }
+
+    .add-photo-button {
+      @media screen and (min-width: 600px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 599.9px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .modal-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 8px;
+
+    @media screen and (max-width: 599.9px) {
+      > * {
+        width: 50%;
+      }
+    }
+  }
+
+  .modal-info {
+    p {
+      line-height: 32px;
+    }
+  }
+
+  .delete-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 16px;
+
+    @media screen and (max-width: 599.9px) {
+      > * {
+        width: 50%;
+      }
+    }
+  }
+}

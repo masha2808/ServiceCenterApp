@@ -1,0 +1,144 @@
+@import "../../styles/variables.scss";
+
+.login-page {
+  min-height: calc(100vh - 60px);
+  background-color: $colorLight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-form {
+    overflow: hidden;
+    form {
+      background-color: white;
+      padding: 32px;
+
+      .title {
+        text-align: center;
+        margin: 8px 0;
+      }
+      
+      .text-field, .button {
+        width: 100%;
+        margin: 8px 0;
+      }
+    }
+    @media screen and (min-width: 500px) {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 5px;
+
+      form {
+        width: 400px;
+      }
+    }
+    @media only screen and (min-width: 1100px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      img {
+        width: 600px;
+      }
+    }
+    @media only screen and (max-width: 1099px) {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+.registration-page {
+  min-height: calc(100vh - 60px);
+  background-color: $colorLight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .registration-form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media screen and (min-width: 600px) {
+      width: 500px;
+      border-radius: 5px;
+      max-height: calc(90vh - 64px);
+      padding: 32px;
+    }
+    @media screen and (max-width: 599.9px) {
+      width: calc(100% - 32px);
+      max-height: calc(100vh - 64px);
+      padding: 32px 16px;
+    }
+
+    .title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .form-data {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .text-field {
+        width: 100%;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .avatar {
+        height: 150px;
+        width: 150px;
+        margin: 8px auto;
+      }
+
+      .user-avatar {
+        height: 150px;
+        width: 150px;
+        margin: 8px auto;
+      }
+
+      .avatar-buttons {
+        display: flex;
+        gap: 8px;
+        padding: 8px 0;
+      }
+
+      .avatar-buttons > * {
+        flex: 1 1 0;
+      }
+
+      .delete-icon {
+        color: white;
+      }
+
+      .add-photo-button {
+        @media screen and (min-width: 600px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 599.9px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .form-buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      gap: 8px;
+
+      @media screen and (max-width: 599.9px) {
+        > * {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

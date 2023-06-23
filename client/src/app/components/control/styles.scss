@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.control {
+  background-color: $colorLight;
+  display: flex;
+  flex-direction: column;
+
+  .check-field {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+
+    .text-field {
+      background-color: white;
+
+      input {
+        padding: 8px;
+      }
+      
+      @media screen and (min-width: 600px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 599.9px) {
+        width: 100%;
+      }
+    }
+  }
+  
+  .control-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+  }
+
+  @media screen and (min-width: 900px) {
+    min-height: calc(100vh - 108px);
+    padding: 24px;
+    gap: 24px;
+  }
+  @media screen and (min-width: 350px) and (max-width: 899.9px) {
+    min-height: calc(100vh - 92px);
+    padding: 16px;
+    gap: 16px;
+  }
+  @media screen and (max-width: 349.9px) {
+    min-height: calc(100vh - 76px);
+    padding: 8px;
+    gap: 8px;
+  }
+}
